@@ -1,0 +1,5 @@
+Label,Path,Rarity,KMeans_Cluster,HP,ATK,DEF,SPD,z_HP,z_ATK,z_DEF,z_SPD,max_|z|,isolation_ratio,flag_reason
+Mydei,Destruction,5,1,1552.3,426.9,194.0,95.0,2.34,-2.07,-2.81,-1.33,2.81,2.92,"DEF -2.8σ, HP +2.3σ, ATK -2.1σ"
+Castorice,Remembrance,5,1,1629.9,523.9,485.1,95.0,2.78,-0.93,-0.06,-1.33,2.78,1.72,HP +2.8σ
+Firefly,Destruction,5,3,815.0,523.9,776.2,104.0,-1.83,-0.93,2.68,0.48,2.68,1.93,"DEF +2.7σ, HP -1.8σ"
+Phainon,Destruction,5,1,1435.9,582.1,703.4,94.0,1.68,-0.24,2.0,-1.53,2.0,1.68,"DEF +2.0σ, HP +1.7σ, SPD -1.5σ"

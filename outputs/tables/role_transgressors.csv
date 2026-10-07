@@ -1,0 +1,22 @@
+character_id,Character Name,Path,Element,Rarity,Label,Cluster,Path_modal_cluster,Path_modal_share,Diffuse_Path,Transgressor,fit_margin,Stat_implied_Path,DBSCAN_label,Archetype,dist_to_centroid,HP,ATK,DEF,SPD
+firefly,Firefly,Destruction,Fire,5,Firefly,3,1,0.5,False,True,1.95,Elation,-1,Armored,1.97,815.0,523.9,776.2,104
+evanescia,Evanescia,Elation,Physical,5,Evanescia,2,3,0.6,False,True,1.78,Erudition,0,High-ATK,1.11,1047.8,737.4,460.8,104
+aglaea,Aglaea,Remembrance,Lightning,5,Aglaea,2,1,0.5,False,True,1.39,Erudition,0,High-ATK,0.71,1241.9,698.5,485.1,102
+jiaoqiu,Jiaoqiu,Nihility,Fire,5,Jiaoqiu,1,2/0,0.43,False,True,1.36,Destruction,0,HP-Heavy / Slow,0.5,1358.3,601.5,509.4,98
+sparxie,Sparxie,Elation,Fire,5,Sparxie,0,3,0.6,False,True,1.35,Hunt,0,Fast,0.78,1047.8,640.3,460.8,107
+trailblazer_remembrance,Trailblazer,Remembrance,Ice,5,Trailblazer (Remembrance),3,1,0.5,False,True,1.13,Elation,0,Armored,0.55,1047.8,543.3,630.6,103
+saber,Saber,Destruction,Wind,5,Saber,3,1,0.5,False,True,1.0,Preservation,0,Armored,1.41,1241.9,601.5,654.9,101
+dr_ratio,Dr. Ratio,Hunt,Imaginary,5,Dr. Ratio,2,0,0.83,False,True,0.99,Erudition,0,High-ATK,1.31,1047.8,776.2,460.8,103
+xueyi,Xueyi,Destruction,Quantum,4,Xueyi,0,1,0.5,False,True,0.95,Nihility,0,Fast,1.0,1058.4,599.8,396.9,103
+luocha,Luocha,Abundance,Imaginary,5,Luocha,2,1,0.57,False,True,0.91,Erudition,0,High-ATK,1.49,1280.7,756.8,363.8,101
+lynx,Lynx,Abundance,Quantum,4,Lynx,3,1,0.57,False,True,0.88,Elation,0,Armored,1.11,1058.4,493.9,551.2,100
+archer,Archer,Hunt,Quantum,5,Archer,2,0,0.83,False,True,0.77,Nihility,0,High-ATK,1.24,1164.2,620.9,485.1,105
+serval,Serval,Erudition,Lightning,4,Serval,0,2,0.8,False,True,0.61,Hunt,0,Fast,0.94,917.3,652.7,374.8,104
+hyacine,Hyacine,Remembrance,Wind,5,Hyacine,3,1,0.5,False,True,0.6,Elation,0,Armored,2.13,1086.6,388.1,630.6,110
+fugue,Fugue,Nihility,Fire,5,Fugue,3,2/0,0.43,False,True,0.57,Elation,0,Armored,1.28,1125.4,582.1,557.9,102
+lingsha,Lingsha,Abundance,Fire,5,Lingsha,2,1,0.57,False,True,0.46,Destruction,0,High-ATK,1.33,1358.3,679.1,436.6,98
+dan_heng_imbibitor_lunae,Dan Heng • Imbibitor Lunae,Destruction,Imaginary,5,Dan Heng • Imbibitor Lunae,2,1,0.5,False,True,0.35,Erudition,0,High-ATK,1.16,1241.9,698.5,363.8,102
+herta,Herta,Erudition,Ice,4,Herta,0,2,0.8,False,True,0.35,Nihility,0,Fast,1.44,952.6,582.1,396.9,100
+arlan,Arlan,Destruction,Lightning,4,Arlan,2,1,0.5,False,True,0.2,Abundance,0,High-ATK,1.68,1199.5,599.8,330.8,102
+trailblazer_destruction,Trailblazer,Destruction,Physical,5,Trailblazer (Destruction),2,1,0.5,False,True,0.06,Abundance,0,High-ATK,0.84,1203.0,620.9,460.8,100
+clara,Clara,Destruction,Physical,5,Clara,2,1,0.5,False,True,0.05,Erudition,0,High-ATK,2.24,1241.9,737.4,485.1,90

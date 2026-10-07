@@ -1,0 +1,87 @@
+character_id,character_name,rarity,path,element,faction,release_date,max_energy,base_spd,base_aggro
+acheron,Acheron,5,Nihility,Lightning,Galaxy Ranger,2024-03-27,9,101,100
+aglaea,Aglaea,5,Remembrance,Lightning,,2025-02-05,350,102,100
+anaxa,Anaxa,5,Erudition,Wind,,2025-04-30,140,97,75
+archer,Archer,5,Hunt,Quantum,,2025-07-11,220,105,75
+argenti,Argenti,5,Erudition,Physical,The Knights of Beauty,2023-12-06,180,103,75
+arlan,Arlan,4,Destruction,Lightning,Herta Space Station,2023-04-25,110,102,125
+ashveil,Ashveil,5,Hunt,Lightning,,,150,106,75
+asta,Asta,4,Harmony,Fire,Herta Space Station,2023-04-25,120,106,100
+aventurine,Aventurine,5,Preservation,Imaginary,Interastral Peace Corporation,2024-04-17,110,106,150
+bailu,Bailu,5,Abundance,Lightning,The Xianzhou Luofu,2023-04-25,100,98,100
+black_swan,Black Swan,5,Nihility,Wind,Garden of Recollection,2024-02-06,120,102,100
+blade,Blade,5,Destruction,Wind,Stellaron Hunters,2023-07-19,130,97,125
+boothill,Boothill,5,Hunt,Physical,,2024-05-29,115,107,75
+bronya,Bronya,5,Harmony,Wind,Belobog,2023-04-25,120,99,100
+castorice,Castorice,5,Remembrance,Quantum,,2025-04-09,,95,100
+cerydra,Cerydra,5,Harmony,Wind,,2025-10-15,130,99,100
+cipher,Cipher,5,Nihility,Quantum,,2025-06-11,130,106,100
+clara,Clara,5,Destruction,Physical,Belobog,2023-04-25,110,90,125
+cyrene,Cyrene,5,Remembrance,Ice,,2025-11-05,24,101,100
+dan_heng,Dan Heng,4,Hunt,Wind,Astral Express,2023-04-25,100,110,75
+dan_heng_imbibitor_lunae,Dan Heng • Imbibitor Lunae,5,Destruction,Imaginary,The Xianzhou Luofu,2023-08-30,140,102,125
+dan_heng_permansor_terrae,Dan Heng • Permansor Terrae,5,Preservation,Physical,,2023-04-25,135,97,150
+dr_ratio,Dr. Ratio,5,Hunt,Imaginary,Intelligentsia Guild,2024-01-17,140,103,75
+evanescia,Evanescia,5,Elation,Physical,,,480,104,100
+evernight,Evernight,5,Remembrance,Ice,,2025-09-25,240,99,100
+feixiao,Feixiao,5,Hunt,Wind,,2024-09-10,12,112,75
+firefly,Firefly,5,Destruction,Fire,,2024-06-19,240,104,125
+fu_xuan,Fu Xuan,5,Preservation,Quantum,The Xianzhou Luofu,2023-09-20,135,100,150
+fugue,Fugue,5,Nihility,Fire,,2024-12-25,130,102,100
+gallagher,Gallagher,4,Abundance,Fire,Penacony,2024-03-27,110,98,100
+gepard,Gepard,5,Preservation,Ice,Belobog,2023-04-25,100,92,150
+guinaifen,Guinaifen,4,Nihility,Fire,The Xianzhou Luofu,2023-10-28,120,106,100
+hanya,Hanya,4,Harmony,Physical,The Xianzhou Luofu,2023-12-06,140,110,100
+herta,Herta,4,Erudition,Ice,Herta Space Station,2023-04-25,110,100,75
+himeko,Himeko,5,Erudition,Fire,Astral Express,2023-04-25,120,96,75
+hook,Hook,4,Destruction,Fire,Belobog,2023-04-25,120,94,125
+huohuo,Huohuo,5,Abundance,Wind,The Xianzhou Luofu,2023-11-15,140,98,100
+hyacine,Hyacine,5,Remembrance,Wind,,2025-05-21,140,110,100
+hysilens,Hysilens,5,Nihility,Physical,,2025-08-13,110,102,100
+jade,Jade,5,Erudition,Quantum,,2024-07-10,140,103,75
+jiaoqiu,Jiaoqiu,5,Nihility,Fire,,2024-08-21,100,98,100
+jing_yuan,Jing Yuan,5,Erudition,Lightning,The Xianzhou Luofu,2023-05-17,130,99,75
+jingliu,Jingliu,5,Destruction,Ice,The Xianzhou Luofu,2023-10-11,140,96,125
+kafka,Kafka,5,Nihility,Lightning,Stellaron Hunters,2023-07-19,120,100,100
+lingsha,Lingsha,5,Abundance,Fire,,2024-10-02,110,98,100
+luka,Luka,4,Nihility,Physical,Belobog,2023-07-19,130,103,100
+luocha,Luocha,5,Abundance,Imaginary,The Xianzhou Luofu,2023-06-28,100,101,100
+lynx,Lynx,4,Abundance,Quantum,Belobog,2023-09-20,100,100,100
+march_7th_hunt,March 7th,4,Hunt,Imaginary,,2024-07-31,110,102,75
+march_7th_preservation,March 7th,4,Preservation,Ice,Astral Express,2023-04-25,120,101,150
+misha,Misha,4,Destruction,Ice,Penacony,2024-02-29,100,96,125
+moze,Moze,4,Hunt,Lightning,,2024-09-10,120,111,75
+mydei,Mydei,5,Destruction,Imaginary,,2025-03-19,160,95,125
+natasha,Natasha,4,Abundance,Physical,Belobog,2023-04-25,90,98,100
+pela,Pela,4,Nihility,Ice,Belobog,2023-04-25,110,105,100
+phainon,Phainon,5,Destruction,Physical,,2025-07-02,12,94,125
+qingque,Qingque,4,Erudition,Quantum,The Xianzhou Luofu,2023-04-25,140,98,75
+rappa,Rappa,5,Erudition,Imaginary,,2024-10-23,140,96,75
+robin,Robin,5,Harmony,Physical,,2024-05-08,160,102,100
+ruan_mei,Ruan Mei,5,Harmony,Ice,Herta Space Station,2023-12-27,130,104,100
+saber,Saber,5,Destruction,Wind,,2025-07-11,360,101,125
+sampo,Sampo,4,Nihility,Wind,Belobog,2023-04-25,120,102,100
+seele,Seele,5,Hunt,Quantum,Belobog,2023-04-25,120,115,75
+serval,Serval,4,Erudition,Lightning,Belobog,2023-04-25,100,104,75
+silver_wolf,Silver Wolf,5,Nihility,Quantum,Stellaron Hunters,2023-06-07,110,107,100
+silver_wolf_lv_999,Silver Wolf LV.999,5,Elation,Imaginary,,,80,99,100
+sparkle,Sparkle,5,Harmony,Quantum,Masked Fools,2024-02-06,110,101,100
+sparxie,Sparxie,5,Elation,Fire,,2026-02-13,160,107,100
+sunday,Sunday,5,Harmony,Imaginary,,2024-12-04,130,96,100
+sushang,Sushang,4,Hunt,Physical,The Xianzhou Luofu,2023-04-25,120,107,75
+the_dahlia,The Dahlia,5,Nihility,Fire,,2025-12-07,130,96,100
+the_herta,The Herta,5,Erudition,Ice,,2025-01-15,220,99,75
+tingyun,Tingyun,4,Harmony,Lightning,The Xianzhou Luofu,2023-04-25,130,112,100
+topaz_numby,Topaz & Numby,5,Hunt,Fire,Interastral Peace Corporation,2023-10-28,130,110,75
+trailblazer_destruction,Trailblazer,5,Destruction,Physical,Astral Express,2023-04-25,120,100,125
+trailblazer_elation,Trailblazer,5,Elation,Lightning,,,160,106,100
+trailblazer_harmony,Trailblazer,5,Harmony,Imaginary,,2024-05-08,140,105,100
+trailblazer_preservation,Trailblazer,5,Preservation,Fire,,2023-04-25,120,95,150
+trailblazer_remembrance,Trailblazer,5,Remembrance,Ice,,2025-01-15,160,103,100
+tribbie,Tribbie,5,Harmony,Quantum,,2025-02-26,120,96,100
+welt,Welt,5,Nihility,Imaginary,Astral Express,2023-04-25,120,102,100
+xueyi,Xueyi,4,Destruction,Quantum,The Xianzhou Luofu,2023-12-27,120,103,125
+yanqing,Yanqing,5,Hunt,Ice,The Xianzhou Luofu,2023-04-25,140,109,75
+yao_guang,Yao Guang,5,Elation,Physical,,2026-02-13,180,101,100
+yukong,Yukong,4,Harmony,Imaginary,The Xianzhou Luofu,2023-06-28,130,107,100
+yunli,Yunli,5,Destruction,Physical,,2024-07-31,240,94,125

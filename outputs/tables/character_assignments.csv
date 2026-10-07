@@ -1,0 +1,87 @@
+character_id,Character Name,Path,Element,Rarity,Label,Cluster,Path_modal_cluster,Path_modal_share,Diffuse_Path,Transgressor,fit_margin,Stat_implied_Path,DBSCAN_label,Archetype,dist_to_centroid,HP,ATK,DEF,SPD
+acheron,Acheron,Nihility,Lightning,5,Acheron,2,2/0,0.43,False,False,0.6,Erudition,0,High-ATK,0.34,1125.4,698.5,436.6,101
+aglaea,Aglaea,Remembrance,Lightning,5,Aglaea,2,1,0.5,False,True,1.39,Erudition,0,High-ATK,0.71,1241.9,698.5,485.1,102
+anaxa,Anaxa,Erudition,Wind,5,Anaxa,2,2,0.8,False,False,-0.48,Erudition,0,High-ATK,1.7,970.2,756.8,557.9,97
+archer,Archer,Hunt,Quantum,5,Archer,2,0,0.83,False,True,0.77,Nihility,0,High-ATK,1.24,1164.2,620.9,485.1,105
+argenti,Argenti,Erudition,Physical,5,Argenti,2,2,0.8,False,False,-0.34,Erudition,0,High-ATK,1.36,1047.8,737.4,363.8,103
+arlan,Arlan,Destruction,Lightning,4,Arlan,2,1,0.5,False,True,0.2,Abundance,0,High-ATK,1.68,1199.5,599.8,330.8,102
+ashveil,Ashveil,Hunt,Lightning,5,Ashveil,0,0,0.83,False,False,-0.03,Hunt,0,Fast,2.13,853.8,776.2,388.1,106
+asta,Asta,Harmony,Fire,4,Asta,0,0/1,0.33,True,False,-0.25,Harmony,0,Fast,1.25,1023.1,511.6,463.0,106
+aventurine,Aventurine,Preservation,Imaginary,5,Aventurine,3,3/1,0.5,False,False,0.55,Remembrance,0,Armored,1.23,1203.0,446.3,654.9,106
+bailu,Bailu,Abundance,Lightning,5,Bailu,1,1,0.57,False,False,-0.09,Abundance,0,HP-Heavy / Slow,0.36,1319.5,562.7,485.1,98
+black_swan,Black Swan,Nihility,Wind,5,Black Swan,2,2/0,0.43,False,False,-0.26,Nihility,0,High-ATK,0.6,1086.6,659.7,485.1,102
+blade,Blade,Destruction,Wind,5,Blade,1,1,0.5,False,False,0.19,Abundance,0,HP-Heavy / Slow,0.29,1358.3,543.3,485.1,97
+boothill,Boothill,Hunt,Physical,5,Boothill,0,0,0.83,False,False,0.19,Harmony,0,Fast,1.41,1203.0,620.9,436.6,107
+bronya,Bronya,Harmony,Wind,5,Bronya,1,0/1,0.33,True,False,0.62,Abundance,0,HP-Heavy / Slow,0.87,1241.9,582.1,533.6,99
+castorice,Castorice,Remembrance,Quantum,5,Castorice,1,1,0.5,False,False,0.65,Abundance,-1,HP-Heavy / Slow,1.64,1629.9,523.9,485.1,95
+cerydra,Cerydra,Harmony,Wind,5,Cerydra,1,0/1,0.33,True,False,1.23,Destruction,0,HP-Heavy / Slow,0.81,1358.3,620.9,485.1,99
+cipher,Cipher,Nihility,Quantum,5,Cipher,0,2/0,0.43,False,False,0.17,Hunt,0,Fast,1.01,931.4,640.3,509.4,106
+clara,Clara,Destruction,Physical,5,Clara,2,1,0.5,False,True,0.05,Erudition,0,High-ATK,2.24,1241.9,737.4,485.1,90
+cyrene,Cyrene,Remembrance,Ice,5,Cyrene,1,1,0.5,False,False,-0.16,Remembrance,0,HP-Heavy / Slow,1.77,1397.1,446.3,582.1,101
+dan_heng,Dan Heng,Hunt,Wind,4,Dan Heng,0,0,0.83,False,False,-0.84,Hunt,0,Fast,1.03,882.0,546.8,396.9,110
+dan_heng_imbibitor_lunae,Dan Heng • Imbibitor Lunae,Destruction,Imaginary,5,Dan Heng • Imbibitor Lunae,2,1,0.5,False,True,0.35,Erudition,0,High-ATK,1.16,1241.9,698.5,363.8,102
+dan_heng_permansor_terrae,Dan Heng • Permansor Terrae,Preservation,Physical,5,Dan Heng • Permansor Terrae,3,3/1,0.5,False,False,-0.16,Preservation,0,Armored,1.79,1047.8,582.1,776.2,97
+dr_ratio,Dr. Ratio,Hunt,Imaginary,5,Dr. Ratio,2,0,0.83,False,True,0.99,Erudition,0,High-ATK,1.31,1047.8,776.2,460.8,103
+evanescia,Evanescia,Elation,Physical,5,Evanescia,2,3,0.6,False,True,1.78,Erudition,0,High-ATK,1.11,1047.8,737.4,460.8,104
+evernight,Evernight,Remembrance,Ice,5,Evernight,1,1,0.5,False,False,-0.04,Remembrance,0,HP-Heavy / Slow,0.91,1319.5,543.3,582.1,99
+feixiao,Feixiao,Hunt,Wind,5,Feixiao,0,0,0.83,False,False,-1.08,Hunt,0,Fast,1.17,1047.8,601.5,388.1,112
+firefly,Firefly,Destruction,Fire,5,Firefly,3,1,0.5,False,True,1.95,Elation,-1,Armored,1.97,815.0,523.9,776.2,104
+fu_xuan,Fu Xuan,Preservation,Quantum,5,Fu Xuan,1,3/1,0.5,False,False,0.54,Remembrance,0,HP-Heavy / Slow,1.74,1474.7,465.7,606.4,100
+fugue,Fugue,Nihility,Fire,5,Fugue,3,2/0,0.43,False,True,0.57,Elation,0,Armored,1.28,1125.4,582.1,557.9,102
+gallagher,Gallagher,Abundance,Fire,4,Gallagher,1,1,0.57,False,False,-0.08,Abundance,0,HP-Heavy / Slow,0.81,1305.4,529.2,441.0,98
+gepard,Gepard,Preservation,Ice,5,Gepard,1,3/1,0.5,False,False,-0.29,Preservation,0,HP-Heavy / Slow,1.77,1397.1,543.3,654.9,92
+guinaifen,Guinaifen,Nihility,Fire,4,Guinaifen,0,2/0,0.43,False,False,0.61,Hunt,0,Fast,0.59,882.0,582.1,441.0,106
+hanya,Hanya,Harmony,Physical,4,Hanya,0,0/1,0.33,True,False,1.36,Hunt,0,Fast,1.0,917.3,564.5,352.8,110
+herta,Herta,Erudition,Ice,4,Herta,0,2,0.8,False,True,0.35,Nihility,0,Fast,1.44,952.6,582.1,396.9,100
+himeko,Himeko,Erudition,Fire,5,Himeko,2,2,0.8,False,False,-0.89,Erudition,0,High-ATK,1.34,1047.8,756.8,436.6,96
+hook,Hook,Destruction,Fire,4,Hook,1,1,0.5,False,False,-0.08,Destruction,0,HP-Heavy / Slow,1.67,1340.6,617.4,352.8,94
+huohuo,Huohuo,Abundance,Wind,5,Huohuo,1,1,0.57,False,False,0.15,Destruction,0,HP-Heavy / Slow,0.5,1358.3,601.5,509.4,98
+hyacine,Hyacine,Remembrance,Wind,5,Hyacine,3,1,0.5,False,True,0.6,Elation,0,Armored,2.13,1086.6,388.1,630.6,110
+hysilens,Hysilens,Nihility,Physical,5,Hysilens,2,2/0,0.43,False,False,0.21,Harmony,0,High-ATK,1.12,1203.0,601.5,485.1,102
+jade,Jade,Erudition,Quantum,5,Jade,2,2,0.8,False,False,0.6,Nihility,0,High-ATK,0.83,1086.6,659.7,509.4,103
+jiaoqiu,Jiaoqiu,Nihility,Fire,5,Jiaoqiu,1,2/0,0.43,False,True,1.36,Destruction,0,HP-Heavy / Slow,0.5,1358.3,601.5,509.4,98
+jing_yuan,Jing Yuan,Erudition,Lightning,5,Jing Yuan,2,2,0.8,False,False,-0.38,Erudition,0,High-ATK,0.38,1164.2,698.5,485.1,99
+jingliu,Jingliu,Destruction,Ice,5,Jingliu,1,1,0.5,False,False,-0.15,Destruction,0,HP-Heavy / Slow,1.45,1435.9,679.1,485.1,96
+kafka,Kafka,Nihility,Lightning,5,Kafka,2,2/0,0.43,False,False,0.44,Erudition,0,High-ATK,0.39,1086.6,679.1,485.1,100
+lingsha,Lingsha,Abundance,Fire,5,Lingsha,2,1,0.57,False,True,0.46,Destruction,0,High-ATK,1.33,1358.3,679.1,436.6,98
+luka,Luka,Nihility,Physical,4,Luka,0,2/0,0.43,False,False,-0.08,Nihility,0,Fast,1.09,917.3,582.1,485.1,103
+luocha,Luocha,Abundance,Imaginary,5,Luocha,2,1,0.57,False,True,0.91,Erudition,0,High-ATK,1.49,1280.7,756.8,363.8,101
+lynx,Lynx,Abundance,Quantum,4,Lynx,3,1,0.57,False,True,0.88,Elation,0,Armored,1.11,1058.4,493.9,551.2,100
+march_7th_hunt,March 7th,Hunt,Imaginary,4,March 7th (Hunt),0,0,0.83,False,False,1.01,Harmony,0,Fast,1.26,1058.4,564.5,441.0,102
+march_7th_preservation,March 7th,Preservation,Ice,4,March 7th (Preservation),3,3/1,0.5,False,False,0.7,Elation,0,Armored,0.83,1058.4,511.6,573.3,101
+misha,Misha,Destruction,Ice,4,Misha,1,1,0.5,False,False,-0.09,Destruction,0,HP-Heavy / Slow,1.23,1270.1,599.8,396.9,96
+moze,Moze,Hunt,Lightning,4,Moze,0,0,0.83,False,False,-1.2,Hunt,0,Fast,1.31,811.4,599.8,352.8,111
+mydei,Mydei,Destruction,Imaginary,5,Mydei,1,1,0.5,False,False,0.36,Abundance,-1,HP-Heavy / Slow,3.52,1552.3,426.9,194.0,95
+natasha,Natasha,Abundance,Physical,4,Natasha,1,1,0.57,False,False,0.41,Remembrance,0,HP-Heavy / Slow,1.53,1164.2,476.3,507.2,98
+pela,Pela,Nihility,Ice,4,Pela,0,2/0,0.43,False,False,0.32,Harmony,0,Fast,0.92,987.8,546.8,463.0,105
+phainon,Phainon,Destruction,Physical,5,Phainon,1,1,0.5,False,False,1.06,Preservation,-1,HP-Heavy / Slow,2.03,1435.9,582.1,703.4,94
+qingque,Qingque,Erudition,Quantum,4,Qingque,2,2,0.8,False,False,-0.45,Erudition,0,High-ATK,0.93,1023.1,652.7,441.0,98
+rappa,Rappa,Erudition,Imaginary,5,Rappa,2,2,0.8,False,False,-0.78,Erudition,0,High-ATK,0.99,1086.6,717.9,460.8,96
+robin,Robin,Harmony,Physical,5,Robin,2,0/1,0.33,True,False,0.43,Abundance,0,High-ATK,1.03,1280.7,640.3,485.1,102
+ruan_mei,Ruan Mei,Harmony,Ice,5,Ruan Mei,2,0/1,0.33,True,False,0.64,Nihility,0,High-ATK,0.89,1086.6,659.7,485.1,104
+saber,Saber,Destruction,Wind,5,Saber,3,1,0.5,False,True,1.0,Preservation,0,Armored,1.41,1241.9,601.5,654.9,101
+sampo,Sampo,Nihility,Wind,4,Sampo,0,2/0,0.43,False,False,-0.14,Nihility,0,Fast,1.09,1023.1,617.4,396.9,102
+seele,Seele,Hunt,Quantum,5,Seele,0,0,0.83,False,False,-1.3,Hunt,0,Fast,1.75,931.4,640.3,363.8,115
+serval,Serval,Erudition,Lightning,4,Serval,0,2,0.8,False,True,0.61,Hunt,0,Fast,0.94,917.3,652.7,374.8,104
+silver_wolf,Silver Wolf,Nihility,Quantum,5,Silver Wolf,0,2/0,0.43,False,False,0.45,Hunt,0,Fast,0.78,1047.8,640.3,460.8,107
+silver_wolf_lv_999,Silver Wolf LV.999,Elation,Imaginary,5,Silver Wolf LV.999,3,3,0.6,False,False,0.94,Preservation,0,Armored,0.82,1125.4,543.3,679.1,99
+sparkle,Sparkle,Harmony,Quantum,5,Sparkle,1,0/1,0.33,True,False,0.88,Remembrance,0,HP-Heavy / Slow,0.97,1397.1,523.9,485.1,101
+sparxie,Sparxie,Elation,Fire,5,Sparxie,0,3,0.6,False,True,1.35,Hunt,0,Fast,0.78,1047.8,640.3,460.8,107
+sunday,Sunday,Harmony,Imaginary,5,Sunday,1,0/1,0.33,True,False,1.16,Destruction,0,HP-Heavy / Slow,1.18,1241.9,640.3,533.6,96
+sushang,Sushang,Hunt,Physical,4,Sushang,0,0,0.83,False,False,-0.59,Hunt,0,Fast,0.52,917.3,564.5,419.0,107
+the_dahlia,The Dahlia,Nihility,Fire,5,The Dahlia,2,2/0,0.43,False,False,0.31,Erudition,0,High-ATK,1.63,1086.6,679.1,606.4,96
+the_herta,The Herta,Erudition,Ice,5,The Herta,2,2,0.8,False,False,-0.23,Erudition,0,High-ATK,0.36,1164.2,679.1,485.1,99
+tingyun,Tingyun,Harmony,Lightning,4,Tingyun,0,0/1,0.33,True,False,1.19,Hunt,0,Fast,1.5,846.7,529.2,396.9,112
+topaz_numby,Topaz & Numby,Hunt,Fire,5,Topaz & Numby,0,0,0.83,False,False,-1.34,Hunt,0,Fast,0.66,931.4,620.9,412.3,110
+trailblazer_destruction,Trailblazer,Destruction,Physical,5,Trailblazer (Destruction),2,1,0.5,False,True,0.06,Abundance,0,High-ATK,0.84,1203.0,620.9,460.8,100
+trailblazer_elation,Trailblazer,Elation,Lightning,5,Trailblazer (Elation),3,3,0.6,False,False,0.1,Remembrance,0,Armored,0.94,1086.6,465.7,630.6,106
+trailblazer_harmony,Trailblazer,Harmony,Imaginary,5,Trailblazer (Harmony),3,0/1,0.33,True,False,0.7,Elation,0,Armored,0.95,1086.6,446.3,679.1,105
+trailblazer_preservation,Trailblazer,Preservation,Fire,5,Trailblazer (Preservation),1,3/1,0.5,False,False,0.01,Destruction,0,HP-Heavy / Slow,1.32,1241.9,601.5,606.4,95
+trailblazer_remembrance,Trailblazer,Remembrance,Ice,5,Trailblazer (Remembrance),3,1,0.5,False,True,1.13,Elation,0,Armored,0.55,1047.8,543.3,630.6,103
+tribbie,Tribbie,Harmony,Quantum,5,Tribbie,3,0/1,0.33,True,False,1.49,Preservation,0,Armored,1.46,1047.8,523.9,727.7,96
+welt,Welt,Nihility,Imaginary,5,Welt,2,2/0,0.43,False,False,-0.24,Nihility,0,High-ATK,0.95,1125.4,620.9,509.4,102
+xueyi,Xueyi,Destruction,Quantum,4,Xueyi,0,1,0.5,False,True,0.95,Nihility,0,Fast,1.0,1058.4,599.8,396.9,103
+yanqing,Yanqing,Hunt,Ice,5,Yanqing,0,0,0.83,False,False,-1.14,Hunt,0,Fast,1.04,892.6,679.1,412.3,109
+yao_guang,Yao Guang,Elation,Physical,5,Yao Guang,3,3,0.6,False,False,1.24,Preservation,0,Armored,1.02,1241.9,465.7,654.9,101
+yukong,Yukong,Harmony,Imaginary,4,Yukong,0,0/1,0.33,True,False,1.35,Hunt,0,Fast,0.46,917.3,599.8,374.8,107
+yunli,Yunli,Destruction,Physical,5,Yunli,1,1,0.5,False,False,-0.22,Destruction,0,HP-Heavy / Slow,1.54,1358.3,679.1,460.8,94

@@ -1,0 +1,12 @@
+# Python environment & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# VS Code / OS junk
+.vscode/
+.DS_Store
+Thumbs.db
