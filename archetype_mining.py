@@ -14,14 +14,22 @@ Pipeline
 
 Usage
 -----
-    python archetype_mining.py --data-dir /path/to/csvs --out-dir outputs
+    python archetype_mining.py --data-dir data/ --out-dir outputs
     python archetype_mining.py --k 5 --eps 0.9 --min-samples 4
     python archetype_mining.py --include-energy      # sensitivity run (see note in README block)
+
+K selection
+-----------
+k is chosen as the best silhouette inside the preferred window k in [4, 6] (candidates with a
+singleton-ish cluster, size < 3, are rejected). k=3 scores marginally higher (0.289 vs 0.284) and the
+elbow is mild, so k=4 vs k=3 is close to a tie; k=4 is used because the brief asks for 4-6 and it
+separates tank-by-HP from tank-by-DEF. Override with --k. Treat the partition as a descriptive
+summary of a continuous stat space, not as discrete natural classes.
 
 Data note
 ---------
 The Kaggle dump is split across several CSVs (there is no single hsr_characters.csv):
-  characters.csv       -> id, name, rarity, path, element, max_energy, base_spd, ...
+  characters.csv       -> character_id, character_name, rarity, path, element, max_energy, base_spd, ...
   character_stats.csv  -> per-ascension base + per-level add for ATK / DEF / HP
 Level-80 stat = value_at_ascension_6 + per_level_add * (80 - 1).
 SPD has no level scaling in HSR, so `base_spd` is already the Lv.80 value.
@@ -71,8 +79,8 @@ SEED = 42
 # --------------------------------------------------------------------------- #
 @dataclass
 class Config:
-    data_dir: Path = Path("/mnt/user-data/uploads")
-    out_dir: Path = Path("/mnt/user-data/outputs/archetype_results")
+    data_dir: Path = Path(".")
+    out_dir: Path = Path("outputs")
     k_min: int = 3
     k_max: int = 8
     k_preferred: tuple = (4, 6)          # silhouette-best k is picked inside this window
@@ -349,8 +357,10 @@ def _scatter_panel(ax, emb, meta, km_labels, db_labels, label_mask, title):
         m = (km_labels == c) & ~noise
         ax.scatter(emb[m, 0], emb[m, 1], s=55, color=palette[c], edgecolor="white", lw=.6,
                    label=f"Cluster {c}")
-    ax.scatter(emb[noise, 0], emb[noise, 1], s=140, marker="X", c=[palette[c] for c in km_labels[noise]],
-               edgecolor="black", lw=1.1, label="DBSCAN noise", zorder=5)
+    ax.scatter(emb[noise, 0], emb[noise, 1], s=55, c=[palette[c] for c in km_labels[noise]],
+               edgecolor="white", lw=.6, zorder=4)                      # keep the cluster dot visible
+    ax.scatter(emb[noise, 0], emb[noise, 1], s=170, marker="X", facecolors="none",
+               edgecolors="black", linewidths=1.6, zorder=5)            # ring-like X overlay
     texts = [ax.text(emb[i, 0], emb[i, 1], meta.loc[i, "Label"], fontsize=7.5,
                      fontweight="bold" if noise[i] else "normal",
                      bbox=dict(boxstyle="round,pad=0.1", fc="white", ec="none", alpha=.7))
@@ -379,9 +389,12 @@ def plot_projection(Xs, meta, km_labels, db_labels, dist_to_centroid, cfg, out: 
                    f"PCA projection (PC1 {ev[0]:.0%}, PC2 {ev[1]:.0%})")
     _scatter_panel(axes[1], t, meta, km_labels, db_labels, mask, f"t-SNE (perplexity={perp})")
     axes[0].set(xlabel="PC1", ylabel="PC2"); axes[1].set(xlabel="t-SNE 1", ylabel="t-SNE 2")
+    from matplotlib.lines import Line2D
     h, l = axes[0].get_legend_handles_labels()
+    h.append(Line2D([], [], marker="X", ls="", mfc="none", mec="black", mew=1.6, ms=11))
+    l.append("DBSCAN noise (X over its cluster colour)")
     fig.legend(h, l, loc="lower center", ncol=len(l), frameon=False)
-    fig.suptitle("HSR base-stat space: K-Means clusters with DBSCAN outliers (X)", fontsize=14)
+    fig.suptitle("HSR base-stat space: K-Means clusters (colour) with DBSCAN outliers (black X)", fontsize=14)
     fig.tight_layout(rect=[0, 0.04, 1, 0.97]); _save(fig, out / "03_projection_pca_tsne.png")
 
     loadings = pd.DataFrame(pca.components_.T, index=cfg.features, columns=["PC1", "PC2"]).round(2)
@@ -421,38 +434,44 @@ def plot_radar(scaled: pd.DataFrame, names: dict, out: Path):
 # --------------------------------------------------------------------------- #
 # 5. Archetype naming (rule-based from centroid z-scores)
 # --------------------------------------------------------------------------- #
-def name_cluster(z: pd.Series) -> str:
-    tags = []
-    if "HP" in z and z["HP"] > 0.6 and z["DEF"] > 0.6: tags.append("Bulk Tank")
-    elif z["DEF"] > 0.8: tags.append("Armored")
-    elif z["HP"] > 0.8: tags.append("HP-Heavy")
-    if z["ATK"] > 0.6 and z["DEF"] < -0.3 : tags.append("Glass Cannon")
-    elif z["ATK"] > 0.6: tags.append("High-ATK")
-    if z["SPD"] > 0.7: tags.append("Fast")
-    elif z["SPD"] < -0.7: tags.append("Slow")
-    if z["HP"] < -0.6 and z["ATK"] < -0.3: tags.append("Low-Stat Support")
-    return " / ".join(tags) if tags else "Balanced Mid"
+_FEATURE_NAME = {"HP": "HP Sponge", "ATK": "Damage Core", "DEF": "Armored Anchor",
+                 "SPD": "Speed Skirmisher", "Max Energy": "Energy Hungry"}
+
+
+def name_clusters(scaled: pd.DataFrame) -> dict:
+    """Name each cluster after its most positive centroid z-score; ties between clusters are
+    resolved greedily by strength so every name is unique. Falls back to 'Balanced'."""
+    names, taken = {}, set()
+    cand = sorted(((scaled.loc[c, f], c, f) for c in scaled.index for f in scaled.columns), reverse=True)
+    for z, c, f in cand:
+        if c in names or f in taken or z < 0.5:
+            continue
+        names[c] = _FEATURE_NAME.get(f, f); taken.add(f)
+    for c in scaled.index:
+        names.setdefault(c, "Balanced")
+    return names
 
 
 # --------------------------------------------------------------------------- #
 # Orchestration
 # --------------------------------------------------------------------------- #
 def run(cfg: Config):
-    cfg.out_dir.mkdir(parents=True, exist_ok=True)
+    fig_dir, tbl_dir = cfg.out_dir / "figures", cfg.out_dir / "tables"
+    fig_dir.mkdir(parents=True, exist_ok=True); tbl_dir.mkdir(parents=True, exist_ok=True)
     meta, X = build_dataset(cfg)
     log.info("Dataset: %d characters x %d features %s", len(X), X.shape[1], cfg.features)
-    X.assign(**{"Label": meta["Label"]}).to_csv(cfg.out_dir / "features_lv80_raw.csv", index=False)
+    X.assign(**{"Label": meta["Label"]}).to_csv(tbl_dir / "features_lv80_raw.csv", index=False)
 
     Xs, scaler = scale_features(X)
     assert np.allclose(Xs.mean(0), 0, atol=1e-8) and np.allclose(Xs.std(0), 1, atol=1e-8)
 
     # ---- K-Means --------------------------------------------------------- #
-    scan = scan_k(Xs, cfg); scan.to_csv(cfg.out_dir / "k_scan.csv", index=False)
+    scan = scan_k(Xs, cfg); scan.to_csv(tbl_dir / "k_scan.csv", index=False)
     k = select_k(scan, cfg)
     km = fit_kmeans(Xs, k, cfg)
     sil = silhouette_score(Xs, km.labels_)
     scaled_c, raw_c = centroid_tables(km, scaler, cfg.features, km.labels_)
-    names = {c: name_cluster(scaled_c.loc[c]) for c in scaled_c.index}
+    names = name_clusters(scaled_c)
     raw_c["Archetype (auto)"] = pd.Series(names)
     log.info("K-Means: chosen k=%d (silhouette=%.3f)\n%s", k, sil, scan.round(3).to_string(index=False))
 
@@ -461,7 +480,7 @@ def run(cfg: Config):
     db_labels = db.labels_
     n_noise = int((db_labels == -1).sum())
     sweep = dbscan_sweep(Xs, cfg.min_samples, np.linspace(eps * 0.6, eps * 1.6, 9))
-    sweep.to_csv(cfg.out_dir / "dbscan_sweep.csv", index=False)
+    sweep.to_csv(tbl_dir / "dbscan_sweep.csv", index=False)
     log.info("DBSCAN: eps=%.3f min_samples=%d -> %d clusters, %d noise\n%s", eps, cfg.min_samples,
              len(set(db_labels) - {-1}), n_noise, sweep.to_string(index=False))
 
@@ -472,26 +491,26 @@ def run(cfg: Config):
     trans["Archetype"] = trans["Cluster"].map(names)
     trans["dist_to_centroid"] = dist_c.round(2)
     out_tbl = pd.concat([trans, X.round(1).reset_index(drop=True)], axis=1)
-    out_tbl.to_csv(cfg.out_dir / "character_assignments.csv", index=False)
+    out_tbl.to_csv(tbl_dir / "character_assignments.csv", index=False)
     out_tbl[out_tbl.Transgressor].sort_values("fit_margin", ascending=False) \
-        .to_csv(cfg.out_dir / "role_transgressors.csv", index=False)
+        .to_csv(tbl_dir / "role_transgressors.csv", index=False)
 
     audit = audit_noise(meta, X, Xs, km, db_labels, cfg.min_samples)
-    audit.to_csv(cfg.out_dir / "dbscan_anomaly_audit.csv", index=False)
-    scaled_c.round(3).to_csv(cfg.out_dir / "centroids_scaled.csv")
-    raw_c.round(1).to_csv(cfg.out_dir / "centroids_raw.csv")
+    audit.to_csv(tbl_dir / "dbscan_anomaly_audit.csv", index=False)
+    scaled_c.round(3).to_csv(tbl_dir / "centroids_scaled.csv")
+    raw_c.round(1).to_csv(tbl_dir / "centroids_raw.csv")
 
     metrics = path_alignment(meta, km.labels_)
     metrics.update({"k": k, "silhouette": sil, "eps": eps, "min_samples": cfg.min_samples,
                     "dbscan_noise": n_noise})
-    pd.Series(metrics).to_csv(cfg.out_dir / "metrics.csv", header=["value"])
+    pd.Series(metrics).to_csv(tbl_dir / "metrics.csv", header=["value"])
 
     # ---- Plots ----------------------------------------------------------- #
-    plot_k_selection(scan, k, cfg.out_dir)
-    plot_kdist(kd, eps, cfg.min_samples, cfg.out_dir)
-    loadings = plot_projection(Xs, meta, km.labels_, db_labels, dist_c, cfg, cfg.out_dir)
-    ct = plot_path_heatmap(meta, km.labels_, cfg.out_dir)
-    plot_radar(scaled_c, names, cfg.out_dir)
+    plot_k_selection(scan, k, fig_dir)
+    plot_kdist(kd, eps, cfg.min_samples, fig_dir)
+    loadings = plot_projection(Xs, meta, km.labels_, db_labels, dist_c, cfg, fig_dir)
+    ct = plot_path_heatmap(meta, km.labels_, fig_dir)
+    plot_radar(scaled_c, names, fig_dir)
 
     # ---- Console summary -------------------------------------------------- #
     pd.set_option("display.width", 220, "display.max_columns", 40, "display.max_colwidth", 80)
